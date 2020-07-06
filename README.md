@@ -21,3 +21,6 @@
 * Main.cpp 源代码
 * CMakeList.txt 配置文件
 * config.txt shell操作命令
+
+### 职工管理系统
+* Main.cpp 主程序源代码文件
