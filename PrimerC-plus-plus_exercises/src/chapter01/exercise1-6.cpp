@@ -32,6 +32,5 @@ int main()
 ** 1、进入当前源文件路径，cd src; cd chapter01
 ** 2、编译源代码文件，g++ --version; g++ -o exercise exercise1-6.cpp
 ** 3、运行生成的可执行程序，exercise; Ubuntu使用 ./exercise
-** 4、输入两个整数，程序自动计算其和与乘积
-** 5、删除生成的可执行程序，rm -rf exercise.exe; Ubuntu使用 rm -rf exercise
+** 4、删除生成的可执行程序，rm -rf exercise.exe; Ubuntu使用 rm -rf exercise
 */
