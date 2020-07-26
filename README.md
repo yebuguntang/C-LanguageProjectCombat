@@ -27,6 +27,9 @@
 
 ### 经典书籍PrimerC++练习答案
 * src/chapter01 第一章习题源代码
+* src/chapter02 第二章习题源代码
+* src/chapter03 第三章习题源代码
+
 
 ## About Author
 
