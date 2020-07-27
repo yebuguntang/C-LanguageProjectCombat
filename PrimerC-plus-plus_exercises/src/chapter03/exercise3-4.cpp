@@ -10,6 +10,47 @@
 
 int main()
 {
+    // solution 3-4
+    // computing the two strings are equal.
+    std::string word_one, word_two;
+    while (std::cin >> word_one >> word_two)
+    {
+        if (word_one != word_two && word_one > word_two)  // word_one > word_two
+        {
+            std::cout << "the bigger string is : " << word_one << std::endl;
+        }
+        else if (word_one != word_two &&  word_one < word_two)  // word_one < word_two
+        {
+            std::cout << "the bigger string is : " << word_two << std::endl;
+        }
+        else  // the two strings are equal.
+        {
+            std::cout << "the two strings are equal." << std::endl;
+        }
+    }
+
+    // cpmputing the size of two strings is euqal.
+    std::string word_three, word_four;
+    while (std::cin >> word_three >> word_four)
+    {
+        // the size of word_three > the size of word_four
+        if (word_three.size() != word_four.size() && word_three.size() > word_four.size())
+        {
+            std::cout << "the bigger size of string is : " << word_three << std::endl;
+            std::cout << "and the size of " << word_three << " string is : " << word_one.size() << std::endl;
+        }
+        // the size of word_three < the size of word_four
+        else if (word_three.size() != word_four.size() &&  word_three.size() < word_four.size())  // word_one < word_two
+        {
+            std::cout << "the bigger size of string is : " << word_four << std::endl;
+            std::cout << "and the size of " << word_four << " string is : " << word_four.size() << std::endl;
+        }
+        else  // the size of two strings are equal.
+        {
+            std::cout << "the size of two strings are equal." << std::endl;
+        }
+    }
+
     return 0;
 }
 
