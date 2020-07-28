@@ -5,7 +5,9 @@
 ** 先估计一下结果，然后实际编程进行验证
 **
 ** 练习3.8:分别用while循环和传统的for循环重写第一题的程序，你觉得哪种形式更好呢?为什么?
-**
+** solution:
+** C++ 11 range for is the best more than traditional for and while.
+** the new always is more useful than before and the science will go on.
 */
 
 #include <iostream>
@@ -13,11 +15,47 @@
 int main()
 {
     // solutin 3-6
+    std::string str = ("this is a string!");
+    std::cout << "before the string is : " << str << std::endl;
+    // C++11 range for 
+    for (auto &i : str)
+    {
+        i = 'X';
+    }
+    std::cout << "after  the string is : " << str << std::endl;
     
     // solution 3-7
-
+    std::string str = ("this is a string!");
+    std::cout << "before the string is : " << str << std::endl;
+    // C++11 range for 
+    // auto == char, 这里循环变量 i 本身就是一个 char 类型的引用
+    for (char &i : str)
+    {
+        i = 'X';
+    }
+    std::cout << "after  the string is : " << str << std::endl;
+    
     // solution 3-8
+    std::string str_for = ("this is a string!");
+    std::cout << "before the string is : " << str_for << std::endl;
+    // traditional for 
+    for (unsigned i = 0; i <= str_for.size(); ++i)
+    {
+        str_for[i] = 'X';
+    }
+    std::cout << "after  the string is : " << str_for << std::endl;
 
+    std::string str_while = ("this is a string!");
+    std::cout << "before the string is : " << str_while << std::endl;
+    // traditional while
+    unsigned j = 0;
+    while (j <= str_while.size())
+    {
+        str_while[j] = 'X';
+        ++j;
+    }
+    std::cout << "after  the string is : " << str_while << std::endl;
+    
     return 0;
 }
 

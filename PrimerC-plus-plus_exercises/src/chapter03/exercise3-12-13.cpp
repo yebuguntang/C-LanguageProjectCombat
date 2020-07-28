@@ -4,23 +4,37 @@
 ** (a) vector<vector<int>> ivec;
 ** (b) vector<string> svec = ivec;
 ** (C) vector<string> svec(10，"null");
+** solution:
+** (a) 正确，其执行结果，声明 ivec 变量为 vector 容器，其储存的对象是 vector int 对象
+** (b) 不正确，两个容器最终储存的类型不匹配，string 和 int
+** (c) 正确，其执行结果，svec 变量为 vector 容器，其储存对象为 string类型，有 10 个 “null”字符串
 **
 ** 练习3.13: 下列的 vector对象各包含多少个元素?这些元素的值分别是多少?
 ** (a) vector<int> vl;
 ** (b) vector<int> v2(10);
 ** (c) vector<int> v3(10, 42);
 ** (d) vector<int> v4{10};
-** (e)vector<int> v5{10, 42};
+** (e) vector<int> v5{10, 42};
 ** (f) vector<string> v6{10};
 ** (g) vector<string> v7{10，"hi"};
+** solution:
+** (a) 0 个元素，值未知
+** (b) 10 个元素，值全部为 0
+** (c) 10 个元素，值全部为 42
+** (d) 1 个元素，值为 10
+** (e) 2 个元素，值分别为 10，42
+** (f) 10 个元素，值全部为空串
+** (g) 10 个元素，值全部为 “hi”
 **
 */
 
 #include <iostream>
+#include <vector>
 
 int main()
 {
     // solutin 3-12
+    std::vector<std::string> svec(10, "null");
 
     return 0;
 }
