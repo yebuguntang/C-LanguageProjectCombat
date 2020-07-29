@@ -26,9 +26,10 @@
 * Main.cpp 主程序源代码文件
 
 ### 经典书籍PrimerC++练习答案
-* src/chapter01 第一章习题源代码
-* src/chapter02 第二章习题源代码
-* src/chapter03 第三章习题源代码
+* src/chapter01 第一章全部习题以及相应的源代码
+* src/chapter02 第二章全部习题以及相应的源代码
+* src/chapter03 第三章全部习题以及相应的源代码
+* src/chapter04 第四章全部习题以及相应的源代码
 
 
 ## About Author
