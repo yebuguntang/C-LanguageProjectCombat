@@ -34,10 +34,32 @@ int main()
         sequence_ivector.push_back(sequence_integer);
     }
     // 输出每对相邻整数的和
+    std::cout << "The sum of two adjacent integers: " << std::endl;
+    for (auto i = 0; i != sequence_ivector.size() - 1; ++i)
+    {
+        std::cout << sequence_ivector[i] + sequence_ivector[i+1] << " ";
+    }
+    std::cout << std::endl;
 
     // 输出高斯求和步骤
+    // 计算输入的序列数是整数还是奇数
+    auto input_size = sequence_ivector.size();
+    if (input_size % 2 != 0)
+    {
+        // 奇数处理，+1 变成偶数个，使得中间那个数自己与自己相加
+        input_size = input_size / 2 + 1;
+    }
+    else
+    {
+        input_size /= 2;
+    } 
+    // 高斯求和方法
+    for (auto i = 0; i != input_size; ++i)
+    {
+        std::cout << sequence_ivector[i] + sequence_ivector[sequence_ivector.size() - 1 - i] << " ";
+    }
+    std::cout << std::endl;
     
-
     return 0;
 }
 
@@ -46,6 +68,6 @@ int main()
 ** 1、进入当前源文件路径，cd src; cd chapter01
 ** 2、编译源代码文件，g++ --version; g++ -o exercise exercise3-18-19-20.cpp
 ** 3、运行生成的可执行程序，exercise; Ubuntu使用 ./exercise
-** 4、随意输入字符，包括回车、空格、制表符，结束输入，键入 EOF 即可
+** 4、随意输入一组数字，例如：1 2 3 4 5 6 7 8 9 ，键入 EOF 即可结束输入
 ** 5、删除生成的可执行程序，rm -rf exercise.exe; Ubuntu使用 rm -rf exercise
 */
