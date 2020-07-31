@@ -29,21 +29,21 @@
 ** 练习4.32:解释下面这个循环的含义。
 ** constexpr int size = 5;
 ** int ia[size] = {1,2,3,4,5};
-** for(int*ptr=ia,ix=0;
-** ix != size && ptr != ia+size;
+** for(int *ptr = ia,ix = 0;
+** ix != size && ptr != ia + size;
 ** ++ix, ++ptr) { // }
-** solution：
+** solution：遍历数组，只要遍历个数不等于数组大小同时指针指向没有对数组越界，则继续遍历即可
 **
 ** 练习4.33:根据运算符优先级说明下面这条表达式的含义。
 ** someValue ? ++x， ++y : --x，--Y
-** solution：
+** solution：somevalue 为真则执行 ++x, ++y, 否则执行 --x, --y
 **
 ** 练习4.34:根据本节给出的变量定义,说明在下面的表达式中将发生什么样的类型转换:
 ** (a) if (fval) 
 ** (b) dval = fval + ival; 
 ** (c) dval + ival * cval;
 ** 需要注意每种运算符遵循的是左结合律还是右结合律。
-** solution：
+** solution：类型转换分为显示类型转换和隐式类型转换。
 **
 ** 练习4.35:假设有如下的定义，
 ** char cval;
@@ -56,10 +56,10 @@
 ** (b) fval = ui - ival * 1.0;
 ** (c) dval = ui * fval;
 ** (d) cval = ival + fval + dval;
-** solution：
+** solution：char -> int -> float -> double
 **
-** 练习4.36: 假设i是int类型，d是double类型，书写表达式 i*=d 使其执行整数类型的乘法而非浮点类型的乘法。
-** solution：
+** 练习4.36: 假设i是int类型，d是double类型，书写表达式 i *= d 使其执行整数类型的乘法而非浮点类型的乘法。
+** solution：强制类型转换 i *= int(d)
 ** 
 ** 练习4.37:用命名的强制类型转换改写下列旧式的转换语句。
 ** int i; double d; const string *ps; char *pc; void *pv;
@@ -67,7 +67,7 @@
 ** (b) i = int(*pc) ;
 ** (C) pv = &d;
 ** (d) pc = (char*) pv;
-** solution：
+** solution：强制类型转换干扰正常类型的检查。
 **
 ** 练习4.38:说明下面这条表达式的含义。
 ** double slope = static_cast<double>(j/i) ;
@@ -79,11 +79,7 @@
 
 int main()
 {
-    // solution 4-28
-    int x[10];
-    int *p = x;
-    std::cout << sizeof (x) /sizeof (*x) << std::endl;
-    std::cout << sizeof (p) /sizeof (*p) << std::endl;
+    // solution 4-38
 
     return 0;
 }
